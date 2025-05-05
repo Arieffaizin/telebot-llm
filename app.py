@@ -3,14 +3,13 @@ from telegram import Bot, Update
 from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
 import os
 import requests
-
 from dotenv import load_dotenv
-load_dotenv()  # optional, untuk dev lokal
+load_dotenv()
 
 # Load environment variables
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 LLM_API_KEY = os.getenv("LLM_API_KEY")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")  # e.g., https://your-app.onrender.com/webhook
+WEBHOOK_URL = os.getenv("WEBHOOK_URL") 
 
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN tidak ditemukan di environment.")
