@@ -4,3 +4,4 @@ uvicorn
 requests
 telegram
 python-dotenv
+gunicorn
